@@ -47,8 +47,19 @@ export interface InspirationCard extends Card {
   application: string;
 }
 
+export type GamePhase =
+  | "event"
+  | "challenge"
+  | "discussion"
+  | "idea"
+  | "result"
+  | "reflection"
+  | "finished";
+
+
 export interface GameState {
   turn: number;
   maxTurns: number;
+  phase: GamePhase;
   regionStatus: RegionStatus;
 }

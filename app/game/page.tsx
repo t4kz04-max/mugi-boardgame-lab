@@ -8,6 +8,8 @@ import { useGame } from "@/hooks/useGame";
 import { Button } from "@/components/ui/button";
 import { cards } from "@/lib/cards";
 import ReflectionForm from "@/components/game/ReflectionForm";
+import GamePhaseDisplay from "@/components/game/GamePhaseDisplay";
+import IdeaSelector from "@/components/game/IdeaSelector";
 
 type Player = {
   id: number;
@@ -20,10 +22,12 @@ export default function GamePage() {
   const {
   turn,
   maxTurns,
+  phase,
   regionStatus,
   currentCardIndex,
-  nextTurn,
-  applyStatusEffect,
+  nextPhase,
+  selectIdea,
+  completeTurn,
   isFinished,
 } = useGame();
 
@@ -45,32 +49,22 @@ export default function GamePage() {
   loadPlayers();
 }, []);
 
-  
 
-  const cardSequence = [
-  {
-    type: "event",
-    index: 0,
-  },
-  {
-    type: "challenge",
-    index: 0,
-  },
-  {
-    type: "idea",
-    index: 0,
-  },
-  {
-    type: "inspiration",
-    index: 0,
-  },
-] as const;
+const eventCard =
+  cards.event[currentCardIndex % cards.event.length];
+
+const challengeCard =
+  cards.challenge[currentCardIndex % cards.challenge.length];
 
 const currentCard =
-  cardSequence[currentCardIndex % cardSequence.length];
+  phase === "event"
+    ? eventCard
+    : challengeCard;
 
-const card =
-  cards[currentCard.type][currentCard.index];
+  const ideaCards =
+  cards.idea.slice(0, 3);
+
+  console.log("PHASE CHECK:", phase);
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-[600px] flex-col gap-6 px-4 py-8">
@@ -82,6 +76,10 @@ const card =
   turn={turn}
   maxTurns={maxTurns}
 />
+
+<p>{phase}</p>
+<GamePhaseDisplay phase={phase} />
+
       <section className="rounded-lg border p-4">
   <h2 className="text-lg font-semibold">
     プレイヤー
@@ -98,7 +96,41 @@ const card =
 
       <RegionStatus status={regionStatus} />
 
-      <CardDisplay card={card} />
+      {phase === "idea" ? (
+  <IdeaSelector
+    ideas={ideaCards}
+    onSelect={(idea) =>
+      selectIdea(
+        idea.statusEffects
+      )
+    }
+  />
+) : phase === "result" ? (
+  <section className="rounded-lg border p-4">
+    <h2 className="text-lg font-semibold">
+      地域状態を更新しました
+    </h2>
+
+    <p className="mt-2">
+      選択した取り組みの効果が反映されました。
+    </p>
+  </section>
+) : phase === "reflection" ? (
+  <ReflectionForm />
+) : phase === "discussion" ? (
+  <section className="rounded-lg border p-4">
+    <h2 className="text-lg font-semibold">
+      話し合い
+    </h2>
+
+    <p className="mt-2">
+      プレイヤー全員で意見を出し合いましょう。
+    </p>
+  </section>
+) : (
+  <CardDisplay card={currentCard} />
+)}
+      
       {isFinished ? (
   <>
     <section className="rounded-lg border p-4 space-y-3">
@@ -115,19 +147,27 @@ const card =
   </>
 ) : (
   <>
-  {card.type === "idea" && (
-    <Button
-      onClick={() =>
-        applyStatusEffect(card.statusEffects)
-      }
-    >
-      取り組みを実行する
-    </Button>
-  )}
+  
+  {phase === "result" && (
+  <Button onClick={nextPhase}>
+    振り返りへ
+  </Button>
+)}
 
-  <Button onClick={nextTurn}>
+{phase === "reflection" && (
+  <Button onClick={completeTurn}>
     次のターンへ
   </Button>
+)}
+
+{phase !== "idea" &&
+ phase !== "result" &&
+ phase !== "reflection" &&
+ (
+  <Button onClick={nextPhase}>
+    次へ
+  </Button>
+)}
 </>
 )}
     </main>
