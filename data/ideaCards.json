@@ -1,0 +1,14 @@
+[
+  {
+    "id": "idea-001",
+    "type": "idea",
+    "title": "古民家活用",
+    "content": "空き家を交流拠点として活用する。",
+    "benefits": "地域外の人との交流や移住のきっかけになる。",
+    "notes": "維持管理する人や費用が必要になる。",
+    "statusEffects": {
+      "vitality": 10,
+      "connection": 10
+    }
+  }
+]

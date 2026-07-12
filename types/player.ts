@@ -7,3 +7,7 @@ export interface PlayerSettings {
   playerCount: number;
   players: Player[];
 }
+
+export interface GameStorage {
+  players: Player[];
+}

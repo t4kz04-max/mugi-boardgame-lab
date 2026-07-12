@@ -20,6 +20,7 @@ export function usePlayerSetup() {
   const [errors, setErrors] = useState<boolean[]>([false, false, false]);
 
   useEffect(() => {
+  const loadPlayers = () => {
     const saved = localStorage.getItem(STORAGE_KEY);
 
     if (!saved) return;
@@ -33,7 +34,10 @@ export function usePlayerSetup() {
     } catch {
       localStorage.removeItem(STORAGE_KEY);
     }
-  }, []);
+  };
+
+  loadPlayers();
+}, []);
 
   useEffect(() => {
     const data: PlayerSettings = {
