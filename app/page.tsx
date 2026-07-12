@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,9 +17,11 @@ export default function Home() {
           </p>
         </div>
 
-        <Button size="lg">
-          ゲームを始める
-        </Button>
+        <Link href="/players">
+  <Button size="lg">
+    ゲームを始める
+  </Button>
+</Link>
       </div>
     </main>
   );
