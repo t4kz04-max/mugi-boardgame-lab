@@ -15,13 +15,17 @@ export default function PlayerNameInput({
   onChange,
 }: PlayerNameInputProps) {
   return (
-    <div className="space-y-2">
-      <Label htmlFor={`player-${playerNumber}`}>
-        プレイヤー{playerNumber}
-      </Label>
+    <div className="space-y-3 rounded-lg border bg-white p-4">
+      <Label
+  htmlFor={`player-${playerNumber}`}
+  className="text-base font-semibold"
+>
+  プレイヤー {playerNumber}
+</Label>
 
       <Input
         id={`player-${playerNumber}`}
+        placeholder={`プレイヤー${playerNumber}の名前`}
         value={value}
         maxLength={20}
         onChange={(event) => onChange(event.target.value)}
@@ -29,7 +33,7 @@ export default function PlayerNameInput({
       />
 
       {error && (
-        <p className="text-sm text-red-500">
+        <p className="text-sm font-medium text-red-600">
           プレイヤー名を入力してください
         </p>
       )}

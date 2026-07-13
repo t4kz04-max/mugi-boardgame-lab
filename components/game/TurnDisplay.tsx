@@ -8,14 +8,24 @@ export default function TurnDisplay({
   maxTurns,
 }: Props) {
   return (
-    <section className="rounded-lg border p-4">
-      <h2 className="text-lg font-semibold">
-        ターン
-      </h2>
+    <section className="rounded-xl border shadow-sm">
+      <div className="rounded-t-xl border-b bg-gray-50 px-4 py-3">
+  <h2 className="text-lg font-semibold">
+    🎲 ターン
+  </h2>
+</div>
 
-      <p className="mt-2 text-muted-foreground">
-        {turn} / {maxTurns}
-      </p>
+      <div className="space-y-3 px-4 py-5">
+  <p className="text-center text-3xl font-bold">
+    {turn}
+    <span className="mx-2 text-gray-400">/</span>
+    {maxTurns}
+  </p>
+
+  <p className="text-center text-sm text-gray-600">
+    全 {maxTurns} ターン中の {turn} ターン目です
+  </p>
+</div>
     </section>
   );
 }

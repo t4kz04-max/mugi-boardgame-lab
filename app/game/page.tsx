@@ -68,26 +68,36 @@ const currentCard =
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-[600px] flex-col gap-6 px-4 py-8">
-      <h1 className="text-2xl font-semibold">
-        牟岐ボードゲームラボ
-      </h1>
+      <header className="space-y-2 text-center">
+  <h1 className="text-3xl font-bold tracking-tight">
+    牟岐ボードゲームラボ
+  </h1>
 
-      <TurnDisplay
-  turn={turn}
-  maxTurns={maxTurns}
-/>
+  <p className="text-sm text-gray-600">
+    地域について対話し、未来を考える協力型ボードゲーム
+  </p>
+</header>
 
-<p>{phase}</p>
-<GamePhaseDisplay phase={phase} />
+      <section className="rounded-xl border bg-gray-50 p-4 space-y-4">
+  <TurnDisplay
+    turn={turn}
+    maxTurns={maxTurns}
+  />
 
-      <section className="rounded-lg border p-4">
-  <h2 className="text-lg font-semibold">
-    プレイヤー
-  </h2>
+  <GamePhaseDisplay phase={phase} />
+</section>
 
-  <ul className="mt-3 space-y-2">
+      <section className="rounded-xl border bg-white p-5 shadow-sm">
+  <h2 className="mb-3 text-lg font-semibold">
+  👥 参加プレイヤー
+</h2>
+
+  <ul className="flex flex-wrap gap-2">
     {players.map((player) => (
-      <li key={player.id}>
+      <li
+  key={player.id}
+  className="rounded-full border bg-gray-100 px-4 py-2 text-sm font-medium"
+>
         {player.name}
       </li>
     ))}
@@ -96,6 +106,7 @@ const currentCard =
 
       <RegionStatus status={regionStatus} />
 
+    
       {phase === "idea" ? (
   <IdeaSelector
     ideas={ideaCards}
@@ -106,26 +117,34 @@ const currentCard =
     }
   />
 ) : phase === "result" ? (
-  <section className="rounded-lg border p-4">
-    <h2 className="text-lg font-semibold">
-      地域状態を更新しました
-    </h2>
+  <section className="rounded-xl border shadow-sm">
+    <div className="border-b bg-green-50 px-4 py-3">
+  <h2 className="text-lg font-semibold text-green-700">
+    ✅ 地域状態を更新しました
+  </h2>
+</div>
 
-    <p className="mt-2">
-      選択した取り組みの効果が反映されました。
-    </p>
+<div className="px-4 py-4">
+  <p className="text-gray-700">
+    選択した取り組みの効果を町の状態へ反映しました。
+  </p>
+</div>
   </section>
 ) : phase === "reflection" ? (
   <ReflectionForm />
 ) : phase === "discussion" ? (
-  <section className="rounded-lg border p-4">
-    <h2 className="text-lg font-semibold">
-      話し合い
-    </h2>
+  <section className="rounded-xl border shadow-sm">
+    <div className="border-b bg-blue-50 px-4 py-3">
+  <h2 className="text-lg font-semibold text-blue-700">
+    💬 話し合い
+  </h2>
+</div>
 
-    <p className="mt-2">
-      プレイヤー全員で意見を出し合いましょう。
-    </p>
+<div className="px-4 py-4">
+  <p className="text-gray-700">
+    プレイヤー全員で自由に意見を出し合いましょう。
+  </p>
+</div>
   </section>
 ) : (
   <CardDisplay card={currentCard} />
@@ -149,24 +168,33 @@ const currentCard =
   <>
   
   {phase === "result" && (
-  <Button onClick={nextPhase}>
-    振り返りへ
-  </Button>
+  <Button
+  className="w-full h-12 text-base font-semibold"
+  onClick={nextPhase}
+>
+  振り返りへ
+</Button>
 )}
 
 {phase === "reflection" && (
-  <Button onClick={completeTurn}>
-    次のターンへ
-  </Button>
+  <Button
+  className="w-full h-12 text-base font-semibold"
+  onClick={completeTurn}
+>
+  次のターンへ
+</Button>
 )}
 
 {phase !== "idea" &&
  phase !== "result" &&
  phase !== "reflection" &&
  (
-  <Button onClick={nextPhase}>
-    次へ
-  </Button>
+  <Button
+  className="w-full h-12 text-base font-semibold"
+  onClick={nextPhase}
+>
+  次へ
+</Button>
 )}
 </>
 )}

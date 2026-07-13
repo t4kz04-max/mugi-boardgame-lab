@@ -26,48 +26,58 @@ const CARD_TYPE_LABELS = {
 
 export default function CardDisplay({ card }: Props) {
   return (
-    <Card>
-      <CardHeader>
-        <p className="text-sm text-muted-foreground">
+    <Card className="rounded-xl border-2 shadow-md">
+      <CardHeader className="space-y-3 border-b bg-gray-50">
+        <p className="inline-block w-fit rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gray-700">
           {CARD_TYPE_LABELS[card.type]}
         </p>
 
-        <CardTitle>
+        <CardTitle className="text-2xl leading-tight">
           {card.title}
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-6 pt-6">
         <p>{card.content}</p>
 
         {card.type === "challenge" && (
           <>
-            <div>
-              <h3 className="font-semibold">
-                現状
-              </h3>
-              <p>{(card as ChallengeCard).currentSituation}</p>
-            </div>
+            <div className="rounded-lg border bg-gray-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold text-gray-600">
+    現状
+  </h3>
 
-            <div>
-              <h3 className="font-semibold">
-                背景
-              </h3>
-              <p>{(card as ChallengeCard).background}</p>
-            </div>
+  <p className="leading-7">
+    {(card as ChallengeCard).currentSituation}
+  </p>
+</div>
 
-            <div>
-              <h3 className="font-semibold">
-                関係者
-              </h3>
-              <p>{(card as ChallengeCard).stakeholders.join("、")}</p>
-            </div>
+            <div className="rounded-lg border bg-gray-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold text-gray-600">
+    背景
+  </h3>
 
-            <div>
-              <h3 className="font-semibold">
-                考えるポイント
-              </h3>
-              <ul className="list-disc pl-5">
+  <p className="leading-7">
+    {(card as ChallengeCard).background}
+  </p>
+</div>
+
+            <div className="rounded-lg border bg-gray-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold text-gray-600">
+    関係者
+  </h3>
+
+  <p className="leading-7">
+    {(card as ChallengeCard).stakeholders.join("、")}
+  </p>
+</div>
+
+            <div className="rounded-lg border bg-blue-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold text-blue-700">
+    考えるポイント
+  </h3>
+
+  <ul className="list-disc space-y-2 pl-5 leading-7">
                 {(card as ChallengeCard).points.map((point) => (
                   <li key={point}>
                     {point}
@@ -80,37 +90,49 @@ export default function CardDisplay({ card }: Props) {
 
         {card.type === "idea" && (
           <>
-            <div>
-              <h3 className="font-semibold">
-                メリット
-              </h3>
-              <p>{(card as IdeaCard).benefits}</p>
-            </div>
+            <div className="rounded-lg border bg-green-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold text-green-700">
+    メリット
+  </h3>
 
-            <div>
-              <h3 className="font-semibold">
-                注意点
-              </h3>
-              <p>{(card as IdeaCard).notes}</p>
-            </div>
+  <p className="leading-7">
+    {(card as IdeaCard).benefits}
+  </p>
+</div>
+
+            <div className="rounded-lg border bg-amber-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold text-amber-700">
+    注意点
+  </h3>
+
+  <p className="leading-7">
+    {(card as IdeaCard).notes}
+  </p>
+</div>
           </>
         )}
 
         {card.type === "event" && (
           <>
-            <div>
-              <h3 className="font-semibold">
-                地域への影響
-              </h3>
-              <p>{(card as EventCard).impact}</p>
-            </div>
+            <div className="rounded-lg border bg-gray-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-600">
+    地域への影響
+  </h3>
 
-            <div>
-              <h3 className="font-semibold">
-                話し合うテーマ
-              </h3>
-              <p>{(card as EventCard).discussionTheme}</p>
-            </div>
+  <p className="leading-7">
+    {(card as EventCard).impact}
+  </p>
+</div>
+
+            <div className="rounded-lg border bg-blue-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-blue-700">
+    話し合うテーマ
+  </h3>
+
+  <p className="leading-7">
+    {(card as EventCard).discussionTheme}
+  </p>
+</div>
           </>
         )}
 

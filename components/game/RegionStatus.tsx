@@ -34,27 +34,38 @@ export default function RegionStatus({
   status,
 }: Props) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>
-          町の状態
-        </CardTitle>
+    <Card className="rounded-xl shadow-sm">
+      <CardHeader className="border-b bg-gray-50">
+        <CardTitle className="text-xl">
+  🏘️ 町の状態
+</CardTitle>
       </CardHeader>
 
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-4 pt-6">
         {STATUS_LABELS.map((item) => (
           <div
-            key={item.key}
-            className="flex justify-between"
-          >
-            <span>
-              {item.label}
-            </span>
+  key={item.key}
+  className="rounded-lg border bg-gray-50 p-4"
+>
+  <div className="mb-2 flex items-center justify-between">
+    <span className="font-medium">
+      {item.label}
+    </span>
 
-            <span>
-              {status[item.key]}
-            </span>
-          </div>
+    <span className="text-lg font-bold">
+      {status[item.key]}
+    </span>
+  </div>
+
+  <div className="h-2 overflow-hidden rounded-full bg-gray-200">
+    <div
+      className="h-full rounded-full bg-green-500 transition-all duration-500"
+      style={{
+        width: `${status[item.key]}%`,
+      }}
+    />
+  </div>
+</div>
         ))}
       </CardContent>
     </Card>
