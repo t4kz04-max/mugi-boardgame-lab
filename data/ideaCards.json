@@ -2,13 +2,421 @@
   {
     "id": "idea-001",
     "type": "idea",
-    "title": "古民家活用",
-    "content": "空き家を交流拠点として活用する。",
-    "benefits": "地域外の人との交流や移住のきっかけになる。",
-    "notes": "維持管理する人や費用が必要になる。",
+    "title": "学生インターン受け入れ",
+    "content": "大学生や高校生を地域プロジェクトへ受け入れ、住民と一緒に地域課題へ取り組む。",
+    "benefits": "若者との交流が増える。新しい視点やアイデアが入り、将来の移住や関係人口につながる。",
+    "notes": "一時的な活動で終わる可能性がある。受け入れ側の負担が増え、継続できる仕組みが必要。",
     "statusEffects": {
       "vitality": 10,
+      "livability": 0,
+      "environment": 0,
+      "connection": 15
+    }
+  },
+  {
+    "id": "idea-002",
+    "type": "idea",
+    "title": "空き家リノベーション",
+    "content": "空き家や古民家を住宅や交流施設として再活用する。",
+    "benefits": "空き家問題の改善につながり、移住者の住まいを確保できる。景観資源も活用できる。",
+    "notes": "改修費が高く、維持管理や所有者との調整が必要になる。",
+    "statusEffects": {
+      "vitality": 10,
+      "livability": 10,
+      "environment": 0,
+      "connection": 5
+        }
+  },
+    {
+    "id": "idea-003",
+    "type": "idea",
+    "title": "体験型観光プログラム",
+    "content": "釣り・漁業・自然散策など、地域ならではの体験を観光資源として活用する。",
+    "benefits": "観光客が増え、地域産業の収入につながる。地域の魅力を知ってもらえる。",
+    "notes": "環境への負荷が増える可能性があり、ガイド育成や季節に応じた運営が必要。",
+    "statusEffects": {
+      "vitality": 15,
+      "livability": 0,
+      "environment": -5,
+      "connection": 5
+    }
+  },
+  {
+    "id": "idea-004",
+    "type": "idea",
+    "title": "地域ブランドづくり",
+    "content": "地域の特産品や文化をブランド化し、全国へ発信する。",
+    "benefits": "地域の知名度向上や地場産業の活性化につながり、地域への誇りが生まれる。",
+    "notes": "継続したPRが必要であり、成果が出るまで時間がかかる。ブランド維持にも継続的な取り組みが必要。",
+    "statusEffects": {
+      "vitality": 15,
+      "livability": 0,
+      "environment": 0,
+      "connection": 5
+        }
+  },
+    {
+    "id": "idea-005",
+    "type": "idea",
+    "title": "地域情報発信",
+    "content": "SNSや動画などを活用して地域の魅力を発信する。",
+    "benefits": "地域の認知度が向上し、観光客や移住希望者へ情報を届けやすくなる。若者も参加しやすい。",
+    "notes": "継続的な情報発信が必要であり、発信だけでは成果につながらない場合もある。",
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 0,
+      "environment": 0,
       "connection": 10
+    }
+  },
+  {
+    "id": "idea-006",
+    "type": "idea",
+    "title": "地域イベント開催",
+    "content": "祭りや交流イベントを開催し、人と人が出会う機会を増やす。",
+    "benefits": "地域交流が活発になり、観光客を呼び込むきっかけにもなる。地域全体の活気が高まる。",
+    "notes": "準備や運営の負担が大きく、一過性で終わる可能性がある。継続的な運営体制が必要。",
+    "statusEffects": {
+      "vitality": 10,
+      "livability": 5,
+      "environment": 0,
+      "connection": 15
+        }
+  },
+    {
+    "id": "idea-007",
+    "type": "idea",
+    "title": "子どもの居場所づくり",
+    "content": "放課後に安心して過ごせる学習・交流スペースを整備する。",
+    "benefits": "子どもが安心して過ごせる環境が整い、地域交流が増え、子育て支援にもつながる。",
+    "notes": "運営スタッフや継続的な資金の確保が必要となる。",
+    "statusEffects": {
+      "vitality": 0,
+      "livability": 15,
+      "environment": 0,
+      "connection": 10
+    }
+  },
+  {
+    "id": "idea-008",
+    "type": "idea",
+    "title": "移住体験プログラム",
+    "content": "短期間の地域体験を通して移住を考えてもらう。",
+    "benefits": "関係人口が増え、移住につながる可能性が高まる。地域の魅力を知ってもらう機会になる。",
+    "notes": "受け入れ体制の整備が必要であり、体験だけで終わる場合もある。",
+    "statusEffects": {
+      "vitality": 10,
+      "livability": 5,
+      "environment": 0,
+      "connection": 10
+        }
+  },
+    {
+    "id": "idea-009",
+    "type": "idea",
+    "title": "デマンド交通導入",
+    "content": "予約制の公共交通を導入し、高齢者や交通弱者の移動を支援する。",
+    "benefits": "移動しやすくなり、買い物や通院が便利になる。公共交通を維持しやすくなる。",
+    "notes": "利用者が少ないと赤字になる可能性があり、継続的な運営費が必要となる。",
+    "statusEffects": {
+      "vitality": 0,
+      "livability": 15,
+      "environment": 0,
+      "connection": 5
+    }
+  },
+  {
+    "id": "idea-010",
+    "type": "idea",
+    "title": "自然環境保全活動",
+    "content": "海岸清掃や森林保全、生き物調査などを地域全体で行う。",
+    "benefits": "自然環境を守り、観光資源を維持できる。環境教育にもつながる。",
+    "notes": "効果が現れるまで時間がかかり、継続的な参加が必要である。短期的な収益は期待しにくい。",
+    "statusEffects": {
+      "vitality": 0,
+      "livability": 0,
+      "environment": 20,
+      "connection": 5
+        }
+  },
+    {
+    "id": "idea-011",
+    "type": "idea",
+    "title": "空き家マッチング制度",
+    "content": "空き家の所有者と、住みたい人・活用したい人をつなぐマッチング制度を整備する。",
+    "benefits": "空き家の活用が進み、地域への移住や起業のきっかけになる。所有者の負担軽減にもつながる。",
+    "notes": "所有者との調整に時間がかかり、契約や管理体制の整備が必要となる。",
+    "statusEffects": {
+      "vitality": 7,
+      "livability": 8,
+      "environment": 1,
+      "connection": 6
+    }
+  },
+  {
+    "id": "idea-012",
+    "type": "idea",
+    "title": "子どもチャレンジプロジェクト",
+    "content": "子どもたちが地域課題を考え、自由に企画を実施できる制度を作る。",
+    "benefits": "若い世代が地域に関心を持ち、新しい発想が生まれる。",
+    "notes": "継続的な支援が必要であり、大人のサポートが欠かせない。",
+    "statusEffects": {
+      "vitality": 9,
+      "livability": 4,
+      "environment": 0,
+      "connection": 10
+        }
+  },
+  {
+    "id": "idea-013",
+    "type": "idea",
+    "title": "地域アンバサダー制度",
+    "content": "住民や出身者が「地域アンバサダー」となり、自分の言葉で町の魅力を発信する。",
+    "benefits": "地域の魅力を多様な視点で伝えられ、地域外との新たなつながりが生まれる。住民の地域愛も高まる。",
+    "notes": "発信内容の継続性が重要であり、活動する人材の育成が必要となる。",
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 2,
+      "environment": 0,
+      "connection": 9
+    }
+  },
+  {
+    "id": "idea-014",
+    "type": "idea",
+    "title": "地域ポイント制度",
+    "content": "地域イベントやボランティア活動に参加するとポイントがもらえる仕組みを作る。",
+    "benefits": "活動への参加者が増え、地域内の交流が活発になる。",
+    "notes": "制度設計が複雑になりやすく、維持管理の仕組みが必要となる。",
+    "statusEffects": {
+      "vitality": 6,
+      "livability": 6,
+      "environment": 0,
+      "connection": 10
+        }
+  },
+   {
+    "id": "idea-015",
+    "type": "idea",
+    "title": "二地域居住支援制度",
+    "content": "都市と地域の二拠点生活を希望する人を支援し、継続的に地域へ関わる人を増やす。",
+    "benefits": "関係人口の増加につながり、移住前のハードルを下げられる。地域に新しい知識や人脈が入る。",
+    "notes": "住宅や仕事の支援体制が必要であり、定住につながるとは限らない。",
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 5,
+      "environment": 0,
+      "connection": 7
+    }
+  },
+  {
+    "id": "idea-016",
+    "type": "idea",
+    "title": "防災ワークショップ",
+    "content": "住民が参加する防災訓練や避難計画づくりを定期的に行う。",
+    "benefits": "災害への備えが強くなり、地域の助け合いが育つ。",
+    "notes": "定期開催が必要であり、参加率を高める工夫が必要となる。",
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 10,
+      "environment": 0,
+      "connection": 9
+        }
+  },
+  {
+    "id": "idea-017",
+    "type": "idea",
+    "title": "地域クラウドファンディング",
+    "content": "地域プロジェクトを住民や応援者から少額ずつ支援してもらう。",
+    "benefits": "新しい挑戦がしやすくなり、地域外からも応援を集められる。",
+    "notes": "魅力的な企画が必要であり、資金が集まる保証はない。",
+    "statusEffects": {
+      "vitality": 10,
+      "livability": 2,
+      "environment": 0,
+      "connection": 6
+    }
+  },
+  {
+    "id": "idea-018",
+    "type": "idea",
+    "title": "森林保全ボランティア",
+    "content": "住民や企業と協力して森林整備や植樹活動を行う。",
+    "benefits": "自然環境を守り、環境教育にもつながる。",
+    "notes": "長期間の継続が必要であり、人手を集める必要がある。",
+    "statusEffects": {
+      "vitality": 3,
+      "livability": 3,
+      "environment": 12,
+      "connection": 6
+        }
+  },
+  {
+    "id": "idea-019",
+    "type": "idea",
+    "title": "世代交流イベント",
+    "content": "子どもから高齢者まで参加できる交流イベントを定期開催する。",
+    "benefits": "世代間交流が進み、孤立を防ぎやすくなる。",
+    "notes": "継続運営する人材が必要であり、参加しやすい内容を考える必要がある。",
+    "statusEffects": {
+      "vitality": 4,
+      "livability": 7,
+      "environment": 0,
+      "connection": 12
+    }
+  },
+  {
+    "id": "idea-020",
+    "type": "idea",
+    "title": "地域データ共有会議",
+    "content": "人口や観光、産業などのデータを住民と共有し、地域の未来を一緒に考える場をつくる。",
+    "benefits": "課題を共通認識にでき、合意形成がしやすくなる。",
+    "notes": "データだけでは解決しないため、分かりやすい説明や対話の場づくりが必要となる。",
+    "statusEffects": {
+      "vitality": 4,
+      "livability": 5,
+      "environment": 2,
+      "connection": 11
+        }
+  },
+  {
+    "id": "idea-021",
+    "type": "idea",
+    "title": "地域通貨制度",
+    "content": "地域のお店やイベントで使える地域通貨を導入し、地域内でお金が循環する仕組みをつくる。",
+    "benefits": "地域内消費を促進でき、地元商店の利用機会が増える。",
+    "notes": "利用店舗の確保が必要であり、制度設計を誤ると利用されない可能性がある。",
+    "statusEffects": {
+      "vitality": 9,
+      "livability": 4,
+      "environment": 0,
+      "connection": 6
+    }
+  },
+  {
+    "id": "idea-022",
+    "type": "idea",
+    "title": "コワーキングスペース整備",
+    "content": "空き施設を活用し、仕事や学習ができるコワーキングスペースを整備する。",
+    "benefits": "起業やテレワークを支援でき、若い世代の利用が期待できる。",
+    "notes": "利用者が少ないと維持が難しく、運営体制を考える必要がある。",
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 7,
+      "environment": 0,
+      "connection": 5
+        }
+  },
+  {
+    "id": "idea-023",
+    "type": "idea",
+    "title": "地産地消給食プロジェクト",
+    "content": "学校給食で地域の食材を積極的に活用し、生産者と子どもたちをつなぐ。",
+    "benefits": "地元農林水産業を支えられ、食育にもつながる。",
+    "notes": "安定した供給体制が必要であり、食材コストが増える場合がある。",
+    "statusEffects": {
+      "vitality": 6,
+      "livability": 8,
+      "environment": 2,
+      "connection": 6
+    }
+  },
+  {
+    "id": "idea-024",
+    "type": "idea",
+    "title": "地域デジタルアーカイブ",
+    "content": "地域の歴史や文化、昔の写真、伝統行事などをデジタルで記録・公開し、未来へ受け継ぐ。",
+    "benefits": "地域の歴史や文化を保存でき、若い世代や地域外の人にも魅力を伝えられ、学習や観光資源として活用できる。",
+    "notes": "継続して記録・更新する人材が必要であり、個人情報や著作権への配慮が必要。",
+    "statusEffects": {
+      "vitality": 4,
+      "livability": 3,
+      "environment": 0,
+      "connection": 9
+        }
+  },
+    {
+    "id": "idea-025",
+    "type": "idea",
+    "title": "高齢者見守りネットワーク",
+    "content": "地域住民や事業者が協力し、高齢者を見守るネットワークを構築する。",
+    "benefits": "安心して暮らせる地域になり、孤立防止につながる。",
+    "notes": "個人情報への配慮が必要であり、協力者の確保が重要となる。",
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 11,
+      "environment": 0,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-026",
+    "type": "idea",
+    "title": "チャレンジショップ制度",
+    "content": "空き店舗を短期間・低コストで貸し出し、新しいお店や事業に挑戦しやすい環境をつくる。",
+    "benefits": "起業へのハードルを下げられ、空き店舗の活用や商店街の活性化につながる。",
+    "notes": "継続して出店者を集める工夫が必要であり、事業が長続きするとは限らない。",
+    "statusEffects": {
+      "vitality": 10,
+      "livability": 4,
+      "environment": 0,
+      "connection": 5
+        }
+  },
+    {
+    "id": "idea-027",
+    "type": "idea",
+    "title": "公共施設シェア制度",
+    "content": "学校や公民館などの公共施設を、地域活動やイベントに柔軟に活用できるようにする。",
+    "benefits": "既存施設を有効活用でき、地域活動の場を増やすことができる。",
+    "notes": "利用ルールの整備が必要であり、施設管理の負担が増える可能性がある。",
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 6,
+      "environment": 0,
+      "connection": 9
+    }
+  },
+  {
+    "id": "idea-028",
+    "type": "idea",
+    "title": "買い物支援サービス",
+    "content": "移動販売車や買い物代行サービスを充実させ、買い物が困難な人を支援する。",
+    "benefits": "日常生活の利便性が向上し、高齢者などの生活を支えることができる。",
+    "notes": "継続的な運営費が必要であり、利用者数を確保する工夫が求められる。",
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 12,
+      "environment": 0,
+      "connection": 5
+        }
+  },
+  {
+    "id": "idea-029",
+    "type": "idea",
+    "title": "地域スキルシェア制度",
+    "content": "住民同士で得意なことを教え合う仕組みをつくる。IT、料理、漁業、DIY、防災など、さまざまな知識や技術を地域内で共有する。",
+    "benefits": "地域の知識や技術が受け継がれ、新しい交流や学びが生まれ、世代や職業を超えたつながりができる。",
+    "notes": "講師役となる人材の確保が必要であり、参加者を集める工夫が必要。",
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 7,
+      "environment": 0,
+      "connection": 10
+    }
+  },
+  {
+    "id": "idea-030",
+    "type": "idea",
+    "title": "景観保全ルールづくり",
+    "content": "地域らしい景観を守るため、住民と話し合いながら景観ルールを整備する。",
+    "benefits": "美しい町並みを維持でき、観光資源としての価値向上にもつながる。",
+    "notes": "合意形成に時間がかかり、建築や改修の自由度が下がる場合がある。",
+    "statusEffects": {
+      "vitality": 4,
+      "livability": 5,
+      "environment": 10,
+      "connection": 5
     }
   }
 ]
