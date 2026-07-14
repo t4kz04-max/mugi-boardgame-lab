@@ -25,6 +25,15 @@ const DESCRIPTIONS: Record<GamePhase, string> = {
   finished: "ゲームは終了です。全体を振り返りましょう。",
 };
 
+const PHASES: GamePhase[] = [
+  "event",
+  "challenge",
+  "discussion",
+  "idea",
+  "result",
+  "reflection",
+];
+
 export default function GamePhaseDisplay({
   phase,
 }: Props) {
@@ -44,6 +53,49 @@ export default function GamePhaseDisplay({
     <p className="text-sm text-gray-600">
       {DESCRIPTIONS[phase]}
     </p>
+    <div className="mt-5 space-y-2">
+  {PHASES.map((item, index) => {
+    const current =
+      PHASES.indexOf(phase);
+
+    const completed =
+      index < current;
+
+    const active =
+      index === current;
+
+    return (
+      <div
+        key={item}
+        className="flex items-center gap-3"
+      >
+        <div
+          className={`flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold ${
+            active
+              ? "bg-blue-600 text-white"
+              : completed
+              ? "bg-green-500 text-white"
+              : "bg-gray-200 text-gray-500"
+          }`}
+        >
+          {completed ? "✓" : index + 1}
+        </div>
+
+        <span
+          className={
+            active
+              ? "font-semibold text-blue-700"
+              : completed
+              ? "text-gray-700"
+              : "text-gray-400"
+          }
+        >
+          {LABELS[item]}
+        </span>
+      </div>
+    );
+  })}
+</div>
   </div>
 </div>
   );

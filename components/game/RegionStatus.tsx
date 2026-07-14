@@ -7,6 +7,8 @@ import {
 
 import { RegionStatus as RegionStatusType } from "@/types/game";
 
+
+
 type Props = {
   status: RegionStatusType;
 };

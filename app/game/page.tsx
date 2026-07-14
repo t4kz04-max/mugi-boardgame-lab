@@ -24,7 +24,12 @@ export default function GamePage() {
   maxTurns,
   phase,
   regionStatus,
-  currentCardIndex,
+  currentEventIndex,
+  currentChallengeIndex,
+  currentIdeaIndex,
+  eventOrder,
+  ideaOrder,
+  challengeOrder,
   nextPhase,
   selectIdea,
   completeTurn,
@@ -49,12 +54,44 @@ export default function GamePage() {
   loadPlayers();
 }, []);
 
+console.log(
+  "EVENT DEBUG",
+  {
+    eventOrder,
+    currentEventIndex,
+    eventIndex:
+      eventOrder[currentEventIndex],
+    title:
+      cards.event[
+        eventOrder[currentEventIndex]
+      ]?.title
+  }
+);
+
+console.log("CHALLENGE DEBUG", {
+  challengeOrder,
+  currentChallengeIndex,
+  challengeIndex:
+    challengeOrder[currentChallengeIndex],
+  title:
+    cards.challenge[
+      challengeOrder[currentChallengeIndex]
+    ]?.title,
+});
 
 const eventCard =
-  cards.event[currentCardIndex % cards.event.length];
+  eventOrder.length > 0
+    ? cards.event[
+        eventOrder[currentEventIndex]
+      ]
+    : cards.event[0];
 
 const challengeCard =
-  cards.challenge[currentCardIndex % cards.challenge.length];
+  challengeOrder.length > 0
+    ? cards.challenge[
+        challengeOrder[currentChallengeIndex]
+      ]
+    : cards.challenge[0];
 
 const currentCard =
   phase === "event"
@@ -62,7 +99,14 @@ const currentCard =
     : challengeCard;
 
   const ideaCards =
-  cards.idea.slice(0, 3);
+  ideaOrder
+    .slice(
+      currentIdeaIndex,
+      currentIdeaIndex + 3
+    )
+    .map(
+      (index) => cards.idea[index]
+    );
 
   console.log("PHASE CHECK:", phase);
 

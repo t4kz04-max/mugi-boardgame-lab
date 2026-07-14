@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { RegionStatus, GamePhase } from "@/types/game";
+import { cards } from "@/lib/cards";
 
 const INITIAL_REGION_STATUS: RegionStatus = {
   vitality: 50,
@@ -12,6 +13,25 @@ const INITIAL_REGION_STATUS: RegionStatus = {
 
 const INITIAL_MAX_TURNS = 6;
 const STORAGE_KEY = "mugi-boardgame-lab";
+function createShuffleOrder(length: number) {
+  const array = Array.from(
+    { length },
+    (_, index) => index
+  );
+
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(
+      Math.random() * (i + 1)
+    );
+
+    [array[i], array[j]] = [
+      array[j],
+      array[i],
+    ];
+  }
+
+  return array;
+}
 
 export function useGame() {
   const [turn, setTurn] = useState(1);
@@ -20,8 +40,29 @@ export function useGame() {
   const [phase, setPhase] =
     useState<GamePhase>("event");
 
-  const [currentCardIndex, setCurrentCardIndex] =
-    useState(0);
+  const [currentEventIndex, setCurrentEventIndex] =
+  useState(0);
+
+  const [currentChallengeIndex, setCurrentChallengeIndex] =
+  useState(0);
+
+  const [currentIdeaIndex, setCurrentIdeaIndex] =
+  useState(0);
+
+  const [eventOrder, setEventOrder] =
+  useState<number[]>(
+    () => createShuffleOrder(cards.event.length)
+  );
+
+  const [challengeOrder, setChallengeOrder] =
+  useState<number[]>(
+    () => createShuffleOrder(cards.challenge.length)
+  );
+
+  const [ideaOrder, setIdeaOrder] =
+  useState<number[]>(
+    () => createShuffleOrder(cards.idea.length)
+  );
 
   const [regionStatus, setRegionStatus] =
     useState<RegionStatus>(
@@ -46,9 +87,48 @@ export function useGame() {
 
           setPhase("event");
 
-          setCurrentCardIndex(
-            data.game.currentCardIndex ?? 0
-          );
+          setCurrentEventIndex(
+  data.game.currentEventIndex ??
+    data.game.currentCardIndex ??
+    0
+);
+
+if (
+  data.game.eventOrder &&
+  data.game.eventOrder.length > 0
+) {
+  setEventOrder(
+    data.game.eventOrder
+  );
+}
+
+if (
+  data.game.challengeOrder &&
+  data.game.challengeOrder.length > 0
+) {
+  setChallengeOrder(
+    data.game.challengeOrder
+  );
+}
+
+if (
+  data.game.ideaOrder &&
+  data.game.ideaOrder.length > 0
+) {
+  setIdeaOrder(
+    data.game.ideaOrder
+  );
+}
+
+setCurrentChallengeIndex(
+  data.game.currentChallengeIndex ??
+    data.game.currentCardIndex ??
+    0
+);
+
+setCurrentIdeaIndex(
+  data.game.currentIdeaIndex ?? 0
+);
 
           setRegionStatus(
             data.game.regionStatus ??
@@ -75,6 +155,8 @@ export function useGame() {
     const saved =
       localStorage.getItem(STORAGE_KEY);
 
+      
+
     const data = saved
       ? JSON.parse(saved)
       : {};
@@ -86,7 +168,12 @@ export function useGame() {
         game: {
           turn,
           phase,
-          currentCardIndex,
+          currentEventIndex,
+          currentChallengeIndex,
+          currentIdeaIndex,
+          eventOrder,
+          challengeOrder,
+          ideaOrder,
           regionStatus,
         },
       })
@@ -95,7 +182,11 @@ export function useGame() {
   }, [
     turn,
     phase,
-    currentCardIndex,
+    currentEventIndex,
+    currentChallengeIndex,
+    currentIdeaIndex,
+    eventOrder,
+    challengeOrder,
     regionStatus,
     loaded,
   ]);
@@ -134,9 +225,17 @@ export function useGame() {
         (current) => current + 1
       );
 
-      setCurrentCardIndex(
-        (current) => current + 1
-      );
+      setCurrentEventIndex(
+  (current) => current + 1
+);
+
+setCurrentChallengeIndex(
+  (current) => current + 1
+);
+
+setCurrentIdeaIndex(
+  (current) => current + 3
+);
 
       setPhase("event");
     }
@@ -145,7 +244,17 @@ export function useGame() {
 const completeTurn = () => {
   setTurn((current) => current + 1);
 
-  setCurrentCardIndex((current) => current + 1);
+  setCurrentEventIndex(
+  (current) => current + 1
+);
+
+setCurrentChallengeIndex(
+  (current) => current + 1
+);
+
+setCurrentIdeaIndex(
+  (current) => current + 3
+);
 
   setPhase("event");
 };
@@ -214,7 +323,12 @@ const completeTurn = () => {
   maxTurns,
   phase,
   regionStatus,
-  currentCardIndex,
+  currentEventIndex,
+  currentChallengeIndex,
+  currentIdeaIndex,
+  eventOrder,
+  challengeOrder,
+  ideaOrder,
   nextPhase,
   applyStatusEffect,
   selectIdea,
