@@ -109,6 +109,11 @@ const currentCard =
     );
 
   console.log("PHASE CHECK:", phase);
+  console.log({
+  ideaOrder,
+  currentIdeaIndex,
+  ideaCards,
+});
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-[600px] flex-col gap-6 px-4 py-8">
@@ -245,3 +250,4 @@ const currentCard =
     </main>
   );
 }
+

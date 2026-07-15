@@ -54,12 +54,12 @@ export function useGame() {
     () => createShuffleOrder(cards.event.length)
   );
 
-  const [challengeOrder, setChallengeOrder] =
+const [challengeOrder, setChallengeOrder] =
   useState<number[]>(
     () => createShuffleOrder(cards.challenge.length)
   );
 
-  const [ideaOrder, setIdeaOrder] =
+const [ideaOrder, setIdeaOrder] =
   useState<number[]>(
     () => createShuffleOrder(cards.idea.length)
   );
@@ -140,7 +140,20 @@ setCurrentIdeaIndex(
           STORAGE_KEY
         );
       }
-    }
+    }else {
+    setEventOrder(
+      createShuffleOrder(cards.event.length)
+    );
+
+    setChallengeOrder(
+      createShuffleOrder(cards.challenge.length)
+    );
+
+    setIdeaOrder(
+      createShuffleOrder(cards.idea.length)
+    );
+}
+
 
     setLoaded(true);
   };
@@ -242,19 +255,24 @@ setCurrentIdeaIndex(
   };
 
 const completeTurn = () => {
+  if (turn >= maxTurns) {
+    setPhase("finished");
+    return;
+  }
+
   setTurn((current) => current + 1);
 
   setCurrentEventIndex(
-  (current) => current + 1
-);
+    (current) => current + 1
+  );
 
-setCurrentChallengeIndex(
-  (current) => current + 1
-);
+  setCurrentChallengeIndex(
+    (current) => current + 1
+  );
 
-setCurrentIdeaIndex(
-  (current) => current + 3
-);
+  setCurrentIdeaIndex(
+    (current) => current + 3
+  );
 
   setPhase("event");
 };
