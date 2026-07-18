@@ -41,100 +41,50 @@ export default function CardDisplay({ card }: Props) {
         <p>{card.content}</p>
 
         {card.type === "challenge" && (
-          <>
-            <div className="rounded-lg border bg-gray-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold text-gray-600">
-    現状
-  </h3>
+  <>
+    <div className="rounded-lg border bg-blue-50 p-4">
+      <h3 className="mb-2 text-sm font-semibold text-blue-700">
+        キーワード
+      </h3>
 
-  <p className="leading-7">
-    {(card as ChallengeCard).currentSituation}
-  </p>
-</div>
-
-            <div className="rounded-lg border bg-gray-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold text-gray-600">
-    背景
-  </h3>
-
-  <p className="leading-7">
-    {(card as ChallengeCard).background}
-  </p>
-</div>
-
-            <div className="rounded-lg border bg-gray-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold text-gray-600">
-    関係者
-  </h3>
-
-  <p className="leading-7">
-    {(card as ChallengeCard).stakeholders.join("、")}
-  </p>
-</div>
-
-            <div className="rounded-lg border bg-blue-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold text-blue-700">
-    考えるポイント
-  </h3>
-
-  <ul className="list-disc space-y-2 pl-5 leading-7">
-                {(card as ChallengeCard).points.map((point) => (
-                  <li key={point}>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </>
-        )}
+      <p>{(card as ChallengeCard).tags.join("・")}</p>
+    </div>
+  </>
+)}
 
         {card.type === "idea" && (
           <>
-            <div className="rounded-lg border bg-green-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold text-green-700">
-    メリット
+            <div className="rounded-lg border bg-blue-50 p-4">
+  <h3 className="mb-2 text-sm font-semibold text-blue-700">
+    キーワード
   </h3>
 
-  <p className="leading-7">
-    {(card as IdeaCard).benefits}
-  </p>
-</div>
-
-            <div className="rounded-lg border bg-amber-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold text-amber-700">
-    注意点
-  </h3>
-
-  <p className="leading-7">
-    {(card as IdeaCard).notes}
+  <p>
+    {(card as IdeaCard).tags.join("・")}
   </p>
 </div>
           </>
         )}
 
         {card.type === "event" && (
-          <>
-            <div className="rounded-lg border bg-gray-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-600">
-    地域への影響
-  </h3>
+  <>
+    <div className="rounded-lg border bg-gray-50 p-4">
+      <h3 className="mb-2 text-sm font-semibold text-gray-600">
+        地域への影響
+      </h3>
 
-  <p className="leading-7">
-    {(card as EventCard).impact}
-  </p>
-</div>
+      <p>{(card as EventCard).impact}</p>
+    </div>
 
-            <div className="rounded-lg border bg-blue-50 p-4">
-  <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-blue-700">
-    話し合うテーマ
-  </h3>
+    <div className="rounded-lg border bg-blue-50 p-4">
+      <h3 className="mb-2 text-sm font-semibold text-blue-700">
+        キーワード
+      </h3>
 
-  <p className="leading-7">
-    {(card as EventCard).discussionTheme}
-  </p>
-</div>
-          </>
-        )}
+      <p>{(card as EventCard).tags.join("・")}</p>
+    </div>
+  </>
+)}
 
         {card.type === "inspiration" && (
           <>

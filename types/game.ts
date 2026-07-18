@@ -20,23 +20,19 @@ export interface Card {
 
 export interface ChallengeCard extends Card {
   type: "challenge";
-  currentSituation: string;
-  background: string;
-  stakeholders: string[];
-  points: string[];
+  tags: string[];
 }
 
 export interface IdeaCard extends Card {
   type: "idea";
-  benefits: string;
-  notes: string;
+  tags: string[];
   statusEffects: Partial<RegionStatus>;
 }
 
 export interface EventCard extends Card {
   type: "event";
   impact: string;
-  discussionTheme: string;
+  tags: string[];
 }
 
 export interface InspirationCard extends Card {

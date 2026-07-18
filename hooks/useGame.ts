@@ -49,6 +49,15 @@ export function useGame() {
   const [currentIdeaIndex, setCurrentIdeaIndex] =
   useState(0);
 
+  const [usedEventIds, setUsedEventIds] =
+  useState<string[]>([]);
+
+const [usedChallengeIds, setUsedChallengeIds] =
+  useState<string[]>([]);
+
+const [usedIdeaIds, setUsedIdeaIds] =
+  useState<string[]>([]);
+
   const [eventOrder, setEventOrder] =
   useState<number[]>(
     () => createShuffleOrder(cards.event.length)
@@ -130,7 +139,18 @@ setCurrentIdeaIndex(
   data.game.currentIdeaIndex ?? 0
 );
 
-          setRegionStatus(
+            setUsedEventIds(
+  data.game.usedEventIds ?? []
+);
+
+setUsedChallengeIds(
+  data.game.usedChallengeIds ?? []
+);
+
+setUsedIdeaIds(
+  data.game.usedIdeaIds ?? []
+);          
+            setRegionStatus(
             data.game.regionStatus ??
             INITIAL_REGION_STATUS
           );
@@ -187,6 +207,9 @@ setCurrentIdeaIndex(
           eventOrder,
           challengeOrder,
           ideaOrder,
+          usedEventIds,
+          usedChallengeIds,
+          usedIdeaIds,
           regionStatus,
         },
       })
@@ -208,14 +231,36 @@ setCurrentIdeaIndex(
   const nextPhase = () => {
 
     if (phase === "event") {
-      setPhase("challenge");
-      return;
-    }
+
+  const index =
+    eventOrder[currentEventIndex];
+
+  const card =
+    cards.event[index];
+
+  if (card) {
+    useEventCard(card.id);
+  }
+
+  setPhase("challenge");
+  return;
+}
 
     if (phase === "challenge") {
-      setPhase("discussion");
-      return;
-    }
+
+  const index =
+    challengeOrder[currentChallengeIndex];
+
+  const card =
+    cards.challenge[index];
+
+  if (card) {
+    useChallengeCard(card.id);
+  }
+
+  setPhase("discussion");
+  return;
+}
 
     if (phase === "discussion") {
       setPhase("idea");
@@ -323,13 +368,62 @@ const completeTurn = () => {
 
 
   const selectIdea = (
-    effects: Partial<RegionStatus>
-  ) => {
+  id: string,
+  effects: Partial<RegionStatus>
+) => {
 
-    applyStatusEffect(effects);
+  useIdeaCard(id);
 
-    setPhase("result");
-  };
+  applyStatusEffect(effects);
+
+  setPhase("result");
+};
+  const useEventCard = (
+  id: string
+) => {
+  setUsedEventIds((current) => {
+    if (current.includes(id)) {
+      return current;
+    }
+
+    return [
+      ...current,
+      id,
+    ];
+  });
+};
+
+
+const useChallengeCard = (
+  id: string
+) => {
+  setUsedChallengeIds((current) => {
+    if (current.includes(id)) {
+      return current;
+    }
+
+    return [
+      ...current,
+      id,
+    ];
+  });
+};
+
+
+const useIdeaCard = (
+  id: string
+) => {
+  setUsedIdeaIds((current) => {
+    if (current.includes(id)) {
+      return current;
+    }
+
+    return [
+      ...current,
+      id,
+    ];
+  });
+};
 
 
   const isFinished =
@@ -341,12 +435,23 @@ const completeTurn = () => {
   maxTurns,
   phase,
   regionStatus,
+
   currentEventIndex,
   currentChallengeIndex,
   currentIdeaIndex,
+
   eventOrder,
   challengeOrder,
   ideaOrder,
+
+  usedEventIds,
+  usedChallengeIds,
+  usedIdeaIds,
+
+  useEventCard,
+  useChallengeCard,
+  useIdeaCard,
+
   nextPhase,
   applyStatusEffect,
   selectIdea,

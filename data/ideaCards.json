@@ -1,11 +1,14 @@
-[
+  [
   {
     "id": "idea-001",
     "type": "idea",
     "title": "学生インターン受け入れ",
-    "content": "大学生や高校生を地域プロジェクトへ受け入れ、住民と一緒に地域課題へ取り組む。",
-    "benefits": "若者との交流が増える。新しい視点やアイデアが入り、将来の移住や関係人口につながる。",
-    "notes": "一時的な活動で終わる可能性がある。受け入れ側の負担が増え、継続できる仕組みが必要。",
+    "content": "大学生や高校生が地域活動に参加し、住民と一緒に地域の取り組みへ関わる機会をつくります。",
+    "tags": [
+      "若者",
+      "教育",
+      "交流"
+    ],
     "statusEffects": {
       "vitality": 10,
       "livability": 0,
@@ -17,23 +20,29 @@
     "id": "idea-002",
     "type": "idea",
     "title": "空き家リノベーション",
-    "content": "空き家や古民家を住宅や交流施設として再活用する。",
-    "benefits": "空き家問題の改善につながり、移住者の住まいを確保できる。景観資源も活用できる。",
-    "notes": "改修費が高く、維持管理や所有者との調整が必要になる。",
+    "content": "空き家や古民家を住宅や交流拠点として活用する取り組みです。",
+    "tags": [
+      "空き家",
+      "移住",
+      "地域資源"
+    ],
     "statusEffects": {
       "vitality": 10,
       "livability": 10,
       "environment": 0,
       "connection": 5
-        }
+    }
   },
-    {
+  {
     "id": "idea-003",
     "type": "idea",
     "title": "体験型観光プログラム",
-    "content": "釣り・漁業・自然散策など、地域ならではの体験を観光資源として活用する。",
-    "benefits": "観光客が増え、地域産業の収入につながる。地域の魅力を知ってもらえる。",
-    "notes": "環境への負荷が増える可能性があり、ガイド育成や季節に応じた運営が必要。",
+    "content": "漁業や自然体験など、地域ならではの体験を観光につなげる取り組みです。",
+    "tags": [
+      "観光",
+      "自然",
+      "体験"
+    ],
     "statusEffects": {
       "vitality": 15,
       "livability": 0,
@@ -45,23 +54,29 @@
     "id": "idea-004",
     "type": "idea",
     "title": "地域ブランドづくり",
-    "content": "地域の特産品や文化をブランド化し、全国へ発信する。",
-    "benefits": "地域の知名度向上や地場産業の活性化につながり、地域への誇りが生まれる。",
-    "notes": "継続したPRが必要であり、成果が出るまで時間がかかる。ブランド維持にも継続的な取り組みが必要。",
+    "content": "地域の特産品や文化の魅力を発信し、新たな価値として育てる取り組みです。",
+    "tags": [
+      "地域資源",
+      "産業",
+      "情報発信"
+    ],
     "statusEffects": {
       "vitality": 15,
       "livability": 0,
       "environment": 0,
       "connection": 5
-        }
+    }
   },
-    {
+  {
     "id": "idea-005",
     "type": "idea",
     "title": "地域情報発信",
-    "content": "SNSや動画などを活用して地域の魅力を発信する。",
-    "benefits": "地域の認知度が向上し、観光客や移住希望者へ情報を届けやすくなる。若者も参加しやすい。",
-    "notes": "継続的な情報発信が必要であり、発信だけでは成果につながらない場合もある。",
+    "content": "SNSや動画などを活用し、地域の魅力を広く発信する取り組みです。",
+    "tags": [
+      "情報発信",
+      "観光",
+      "交流"
+    ],
     "statusEffects": {
       "vitality": 5,
       "livability": 0,
@@ -73,23 +88,29 @@
     "id": "idea-006",
     "type": "idea",
     "title": "地域イベント開催",
-    "content": "祭りや交流イベントを開催し、人と人が出会う機会を増やす。",
-    "benefits": "地域交流が活発になり、観光客を呼び込むきっかけにもなる。地域全体の活気が高まる。",
-    "notes": "準備や運営の負担が大きく、一過性で終わる可能性がある。継続的な運営体制が必要。",
+    "content": "住民同士や地域外の人が交流できるイベントを企画・開催します。",
+    "tags": [
+      "交流",
+      "地域活動",
+      "文化"
+    ],
     "statusEffects": {
       "vitality": 10,
       "livability": 5,
       "environment": 0,
       "connection": 15
-        }
+    }
   },
-    {
+  {
     "id": "idea-007",
     "type": "idea",
     "title": "子どもの居場所づくり",
-    "content": "放課後に安心して過ごせる学習・交流スペースを整備する。",
-    "benefits": "子どもが安心して過ごせる環境が整い、地域交流が増え、子育て支援にもつながる。",
-    "notes": "運営スタッフや継続的な資金の確保が必要となる。",
+    "content": "子どもが安心して学び、遊び、地域の人と交流できる場所を整備します。",
+    "tags": [
+      "子ども",
+      "教育",
+      "地域"
+    ],
     "statusEffects": {
       "vitality": 0,
       "livability": 15,
@@ -101,23 +122,29 @@
     "id": "idea-008",
     "type": "idea",
     "title": "移住体験プログラム",
-    "content": "短期間の地域体験を通して移住を考えてもらう。",
-    "benefits": "関係人口が増え、移住につながる可能性が高まる。地域の魅力を知ってもらう機会になる。",
-    "notes": "受け入れ体制の整備が必要であり、体験だけで終わる場合もある。",
+    "content": "地域での暮らしを体験できる機会を設け、移住を考えるきっかけをつくります。",
+    "tags": [
+      "移住",
+      "交流",
+      "地域体験"
+    ],
     "statusEffects": {
       "vitality": 10,
       "livability": 5,
       "environment": 0,
       "connection": 10
-        }
+    }
   },
-    {
+  {
     "id": "idea-009",
     "type": "idea",
     "title": "デマンド交通導入",
-    "content": "予約制の公共交通を導入し、高齢者や交通弱者の移動を支援する。",
-    "benefits": "移動しやすくなり、買い物や通院が便利になる。公共交通を維持しやすくなる。",
-    "notes": "利用者が少ないと赤字になる可能性があり、継続的な運営費が必要となる。",
+    "content": "予約制の公共交通を活用し、地域での移動を支える仕組みを整えます。",
+    "tags": [
+      "交通",
+      "高齢者",
+      "生活"
+    ],
     "statusEffects": {
       "vitality": 0,
       "livability": 15,
@@ -129,294 +156,1037 @@
     "id": "idea-010",
     "type": "idea",
     "title": "自然環境保全活動",
-    "content": "海岸清掃や森林保全、生き物調査などを地域全体で行う。",
-    "benefits": "自然環境を守り、観光資源を維持できる。環境教育にもつながる。",
-    "notes": "効果が現れるまで時間がかかり、継続的な参加が必要である。短期的な収益は期待しにくい。",
+    "content": "海岸や森林など地域の自然を守る活動を、住民みんなで進めます。",
+    "tags": [
+      "環境",
+      "自然",
+      "地域活動"
+    ],
     "statusEffects": {
       "vitality": 0,
       "livability": 0,
       "environment": 20,
       "connection": 5
-        }
+    }
   },
     {
-    "id": "idea-011",
-    "type": "idea",
-    "title": "空き家マッチング制度",
-    "content": "空き家の所有者と、住みたい人・活用したい人をつなぐマッチング制度を整備する。",
-    "benefits": "空き家の活用が進み、地域への移住や起業のきっかけになる。所有者の負担軽減にもつながる。",
-    "notes": "所有者との調整に時間がかかり、契約や管理体制の整備が必要となる。",
-    "statusEffects": {
-      "vitality": 7,
-      "livability": 8,
-      "environment": 1,
-      "connection": 6
-    }
-  },
+  "id": "idea-011",
+  "type": "idea",
+  "title": "空き家マッチング制度",
+  "content": "空き家を活用したい人と所有者をつなぎ、地域で新たな活用方法を生み出す仕組みです。",
+  "tags": [
+    "空き家",
+    "移住",
+    "地域資源"
+  ],
+  "statusEffects": {
+    "vitality": 7,
+    "livability": 8,
+    "environment": 1,
+    "connection": 6
+  }
+},
+{
+  "id": "idea-012",
+  "type": "idea",
+  "title": "子どもチャレンジプロジェクト",
+  "content": "子どもたちが地域の課題やアイデアを考え、自分たちで挑戦できる機会をつくります。",
+  "tags": [
+    "子ども",
+    "教育",
+    "地域活動"
+  ],
+  "statusEffects": {
+    "vitality": 9,
+    "livability": 4,
+    "environment": 0,
+    "connection": 10
+  }
+},
+{
+  "id": "idea-013",
+  "type": "idea",
+  "title": "地域アンバサダー制度",
+  "content": "住民や地域にゆかりのある人が、自分の言葉で地域の魅力を発信する取り組みです。",
+  "tags": [
+    "情報発信",
+    "交流",
+    "地域資源"
+  ],
+  "statusEffects": {
+    "vitality": 8,
+    "livability": 2,
+    "environment": 0,
+    "connection": 9
+  }
+},
+{
+  "id": "idea-014",
+  "type": "idea",
+  "title": "地域ポイント制度",
+  "content": "地域活動やボランティアへの参加を応援するポイント制度を導入します。",
+  "tags": [
+    "地域活動",
+    "交流",
+    "参加"
+  ],
+  "statusEffects": {
+    "vitality": 6,
+    "livability": 6,
+    "environment": 0,
+    "connection": 10
+  }
+},
+{
+  "id": "idea-015",
+  "type": "idea",
+  "title": "二地域居住支援制度",
+  "content": "都市と地域を行き来しながら暮らす人が、地域と継続的に関われる仕組みをつくります。",
+  "tags": [
+    "移住",
+    "関係人口",
+    "地域"
+  ],
+  "statusEffects": {
+    "vitality": 8,
+    "livability": 5,
+    "environment": 0,
+    "connection": 7
+  }
+},
+{
+  "id": "idea-016",
+  "type": "idea",
+  "title": "防災ワークショップ",
+  "content": "住民が一緒に防災について学び、地域で備える機会を定期的につくります。",
+  "tags": [
+    "防災",
+    "安全",
+    "地域"
+  ],
+  "statusEffects": {
+    "vitality": 2,
+    "livability": 10,
+    "environment": 0,
+    "connection": 9
+  }
+},
+{
+  "id": "idea-017",
+  "type": "idea",
+  "title": "地域クラウドファンディング",
+  "content": "地域のプロジェクトを、多くの人から少しずつ応援してもらう仕組みです。",
+  "tags": [
+    "資金",
+    "地域活動",
+    "挑戦"
+  ],
+  "statusEffects": {
+    "vitality": 10,
+    "livability": 2,
+    "environment": 0,
+    "connection": 6
+  }
+},
+{
+  "id": "idea-018",
+  "type": "idea",
+  "title": "森林保全ボランティア",
+  "content": "住民や企業が協力して森林を守り、自然環境を未来へつなぐ活動です。",
+  "tags": [
+    "環境",
+    "自然",
+    "地域活動"
+  ],
+  "statusEffects": {
+    "vitality": 3,
+    "livability": 3,
+    "environment": 12,
+    "connection": 6
+  }
+},
+{
+  "id": "idea-019",
+  "type": "idea",
+  "title": "世代交流イベント",
+  "content": "子どもから高齢者まで、さまざまな世代が交流できる場をつくります。",
+  "tags": [
+    "交流",
+    "世代",
+    "地域活動"
+  ],
+  "statusEffects": {
+    "vitality": 4,
+    "livability": 7,
+    "environment": 0,
+    "connection": 12
+  }
+},
+{
+  "id": "idea-020",
+  "type": "idea",
+  "title": "地域データ共有会議",
+  "content": "人口や観光などの地域データを共有し、みんなで地域の未来を考える場をつくります。",
+  "tags": [
+    "地域づくり",
+    "行政",
+    "対話"
+  ],
+  "statusEffects": {
+    "vitality": 4,
+    "livability": 5,
+    "environment": 2,
+    "connection": 11
+  }
+},
   {
-    "id": "idea-012",
+  "id": "idea-021",
+  "type": "idea",
+  "title": "地域通貨制度",
+  "content": "地域で使える通貨をつくり、お店やイベントで人とお金が循環する仕組みを育てる。",
+  "tags": [
+    "地域経済",
+    "商店",
+    "交流"
+  ],
+  "statusEffects": {
+    "vitality": 9,
+    "livability": 4,
+    "environment": 0,
+    "connection": 6
+  }
+},
+{
+  "id": "idea-022",
+  "type": "idea",
+  "title": "コワーキングスペース整備",
+  "content": "空き施設を活用し、仕事や学習、新しい挑戦ができる場所をつくる。",
+  "tags": [
+    "働き方",
+    "起業",
+    "交流"
+  ],
+  "statusEffects": {
+    "vitality": 8,
+    "livability": 7,
+    "environment": 0,
+    "connection": 5
+  }
+},
+{
+  "id": "idea-023",
+  "type": "idea",
+  "title": "地産地消給食プロジェクト",
+  "content": "学校給食で地域の食材を活用し、生産者と子どもたちをつなぐ。",
+  "tags": [
+    "食",
+    "教育",
+    "地域産業"
+  ],
+  "statusEffects": {
+    "vitality": 6,
+    "livability": 8,
+    "environment": 2,
+    "connection": 6
+  }
+},
+{
+  "id": "idea-024",
+  "type": "idea",
+  "title": "地域デジタルアーカイブ",
+  "content": "地域の歴史や文化、写真や思い出をデジタルで記録し、未来へ残す。",
+  "tags": [
+    "歴史",
+    "文化",
+    "デジタル"
+  ],
+  "statusEffects": {
+    "vitality": 4,
+    "livability": 3,
+    "environment": 0,
+    "connection": 9
+  }
+},
+{
+  "id": "idea-025",
+  "type": "idea",
+  "title": "高齢者見守りネットワーク",
+  "content": "住民や地域のお店が協力し、高齢者を見守る仕組みをつくる。",
+  "tags": [
+    "高齢者",
+    "福祉",
+    "地域"
+  ],
+  "statusEffects": {
+    "vitality": 2,
+    "livability": 11,
+    "environment": 0,
+    "connection": 8
+  }
+},
+{
+  "id": "idea-026",
+  "type": "idea",
+  "title": "チャレンジショップ制度",
+  "content": "空き店舗を活用し、新しいお店や事業に挑戦しやすい環境をつくる。",
+  "tags": [
+    "起業",
+    "商店街",
+    "空き店舗"
+  ],
+  "statusEffects": {
+    "vitality": 10,
+    "livability": 4,
+    "environment": 0,
+    "connection": 5
+  }
+},
+{
+  "id": "idea-027",
+  "type": "idea",
+  "title": "公共施設シェア制度",
+  "content": "学校や公民館などを地域活動やイベントにもっと活用しやすくする。",
+  "tags": [
+    "公共施設",
+    "地域活動",
+    "交流"
+  ],
+  "statusEffects": {
+    "vitality": 5,
+    "livability": 6,
+    "environment": 0,
+    "connection": 9
+  }
+},
+{
+  "id": "idea-028",
+  "type": "idea",
+  "title": "買い物支援サービス",
+  "content": "移動販売や買い物支援を充実させ、誰もが買い物しやすい地域を目指す。",
+  "tags": [
+    "買い物",
+    "高齢者",
+    "生活"
+  ],
+  "statusEffects": {
+    "vitality": 2,
+    "livability": 12,
+    "environment": 0,
+    "connection": 5
+  }
+},
+{
+  "id": "idea-029",
+  "type": "idea",
+  "title": "地域スキルシェア制度",
+  "content": "住民同士が得意なことを教え合い、学び合える仕組みをつくる。",
+  "tags": [
+    "学び",
+    "交流",
+    "地域"
+  ],
+  "statusEffects": {
+    "vitality": 5,
+    "livability": 7,
+    "environment": 0,
+    "connection": 10
+  }
+},
+{
+  "id": "idea-030",
+  "type": "idea",
+  "title": "景観保全ルールづくり",
+  "content": "地域らしい景観を守るため、住民みんなでルールを考えていく。",
+  "tags": [
+    "景観",
+    "環境",
+    "地域"
+  ],
+  "statusEffects": {
+    "vitality": 4,
+    "livability": 5,
+    "environment": 10,
+    "connection": 5
+  }
+},
+{
+    "id": "idea-031",
     "type": "idea",
-    "title": "子どもチャレンジプロジェクト",
-    "content": "子どもたちが地域課題を考え、自由に企画を実施できる制度を作る。",
-    "benefits": "若い世代が地域に関心を持ち、新しい発想が生まれる。",
-    "notes": "継続的な支援が必要であり、大人のサポートが欠かせない。",
-    "statusEffects": {
-      "vitality": 9,
-      "livability": 4,
-      "environment": 0,
-      "connection": 10
-        }
-  },
-  {
-    "id": "idea-013",
-    "type": "idea",
-    "title": "地域アンバサダー制度",
-    "content": "住民や出身者が「地域アンバサダー」となり、自分の言葉で町の魅力を発信する。",
-    "benefits": "地域の魅力を多様な視点で伝えられ、地域外との新たなつながりが生まれる。住民の地域愛も高まる。",
-    "notes": "発信内容の継続性が重要であり、活動する人材の育成が必要となる。",
-    "statusEffects": {
-      "vitality": 8,
-      "livability": 2,
-      "environment": 0,
-      "connection": 9
-    }
-  },
-  {
-    "id": "idea-014",
-    "type": "idea",
-    "title": "地域ポイント制度",
-    "content": "地域イベントやボランティア活動に参加するとポイントがもらえる仕組みを作る。",
-    "benefits": "活動への参加者が増え、地域内の交流が活発になる。",
-    "notes": "制度設計が複雑になりやすく、維持管理の仕組みが必要となる。",
-    "statusEffects": {
-      "vitality": 6,
-      "livability": 6,
-      "environment": 0,
-      "connection": 10
-        }
-  },
-   {
-    "id": "idea-015",
-    "type": "idea",
-    "title": "二地域居住支援制度",
-    "content": "都市と地域の二拠点生活を希望する人を支援し、継続的に地域へ関わる人を増やす。",
-    "benefits": "関係人口の増加につながり、移住前のハードルを下げられる。地域に新しい知識や人脈が入る。",
-    "notes": "住宅や仕事の支援体制が必要であり、定住につながるとは限らない。",
-    "statusEffects": {
-      "vitality": 8,
-      "livability": 5,
-      "environment": 0,
-      "connection": 7
-    }
-  },
-  {
-    "id": "idea-016",
-    "type": "idea",
-    "title": "防災ワークショップ",
-    "content": "住民が参加する防災訓練や避難計画づくりを定期的に行う。",
-    "benefits": "災害への備えが強くなり、地域の助け合いが育つ。",
-    "notes": "定期開催が必要であり、参加率を高める工夫が必要となる。",
+    "title": "地域送迎ボランティア",
+    "content": "通院や買い物などの移動を、住民同士が協力して支え合う送迎の仕組みをつくります。",
+    "tags": [
+      "交通",
+      "高齢者",
+      "助け合い"
+    ],
     "statusEffects": {
       "vitality": 2,
-      "livability": 10,
-      "environment": 0,
-      "connection": 9
-        }
-  },
-  {
-    "id": "idea-017",
-    "type": "idea",
-    "title": "地域クラウドファンディング",
-    "content": "地域プロジェクトを住民や応援者から少額ずつ支援してもらう。",
-    "benefits": "新しい挑戦がしやすくなり、地域外からも応援を集められる。",
-    "notes": "魅力的な企画が必要であり、資金が集まる保証はない。",
-    "statusEffects": {
-      "vitality": 10,
-      "livability": 2,
-      "environment": 0,
-      "connection": 6
-    }
-  },
-  {
-    "id": "idea-018",
-    "type": "idea",
-    "title": "森林保全ボランティア",
-    "content": "住民や企業と協力して森林整備や植樹活動を行う。",
-    "benefits": "自然環境を守り、環境教育にもつながる。",
-    "notes": "長期間の継続が必要であり、人手を集める必要がある。",
-    "statusEffects": {
-      "vitality": 3,
-      "livability": 3,
-      "environment": 12,
-      "connection": 6
-        }
-  },
-  {
-    "id": "idea-019",
-    "type": "idea",
-    "title": "世代交流イベント",
-    "content": "子どもから高齢者まで参加できる交流イベントを定期開催する。",
-    "benefits": "世代間交流が進み、孤立を防ぎやすくなる。",
-    "notes": "継続運営する人材が必要であり、参加しやすい内容を考える必要がある。",
-    "statusEffects": {
-      "vitality": 4,
-      "livability": 7,
-      "environment": 0,
-      "connection": 12
-    }
-  },
-  {
-    "id": "idea-020",
-    "type": "idea",
-    "title": "地域データ共有会議",
-    "content": "人口や観光、産業などのデータを住民と共有し、地域の未来を一緒に考える場をつくる。",
-    "benefits": "課題を共通認識にでき、合意形成がしやすくなる。",
-    "notes": "データだけでは解決しないため、分かりやすい説明や対話の場づくりが必要となる。",
-    "statusEffects": {
-      "vitality": 4,
-      "livability": 5,
-      "environment": 2,
-      "connection": 11
-        }
-  },
-  {
-    "id": "idea-021",
-    "type": "idea",
-    "title": "地域通貨制度",
-    "content": "地域のお店やイベントで使える地域通貨を導入し、地域内でお金が循環する仕組みをつくる。",
-    "benefits": "地域内消費を促進でき、地元商店の利用機会が増える。",
-    "notes": "利用店舗の確保が必要であり、制度設計を誤ると利用されない可能性がある。",
-    "statusEffects": {
-      "vitality": 9,
-      "livability": 4,
-      "environment": 0,
-      "connection": 6
-    }
-  },
-  {
-    "id": "idea-022",
-    "type": "idea",
-    "title": "コワーキングスペース整備",
-    "content": "空き施設を活用し、仕事や学習ができるコワーキングスペースを整備する。",
-    "benefits": "起業やテレワークを支援でき、若い世代の利用が期待できる。",
-    "notes": "利用者が少ないと維持が難しく、運営体制を考える必要がある。",
-    "statusEffects": {
-      "vitality": 8,
-      "livability": 7,
-      "environment": 0,
-      "connection": 5
-        }
-  },
-  {
-    "id": "idea-023",
-    "type": "idea",
-    "title": "地産地消給食プロジェクト",
-    "content": "学校給食で地域の食材を積極的に活用し、生産者と子どもたちをつなぐ。",
-    "benefits": "地元農林水産業を支えられ、食育にもつながる。",
-    "notes": "安定した供給体制が必要であり、食材コストが増える場合がある。",
-    "statusEffects": {
-      "vitality": 6,
-      "livability": 8,
-      "environment": 2,
-      "connection": 6
-    }
-  },
-  {
-    "id": "idea-024",
-    "type": "idea",
-    "title": "地域デジタルアーカイブ",
-    "content": "地域の歴史や文化、昔の写真、伝統行事などをデジタルで記録・公開し、未来へ受け継ぐ。",
-    "benefits": "地域の歴史や文化を保存でき、若い世代や地域外の人にも魅力を伝えられ、学習や観光資源として活用できる。",
-    "notes": "継続して記録・更新する人材が必要であり、個人情報や著作権への配慮が必要。",
-    "statusEffects": {
-      "vitality": 4,
-      "livability": 3,
-      "environment": 0,
-      "connection": 9
-        }
-  },
-    {
-    "id": "idea-025",
-    "type": "idea",
-    "title": "高齢者見守りネットワーク",
-    "content": "地域住民や事業者が協力し、高齢者を見守るネットワークを構築する。",
-    "benefits": "安心して暮らせる地域になり、孤立防止につながる。",
-    "notes": "個人情報への配慮が必要であり、協力者の確保が重要となる。",
-    "statusEffects": {
-      "vitality": 2,
-      "livability": 11,
+      "livability": 13,
       "environment": 0,
       "connection": 8
     }
   },
   {
-    "id": "idea-026",
+    "id": "idea-032",
     "type": "idea",
-    "title": "チャレンジショップ制度",
-    "content": "空き店舗を短期間・低コストで貸し出し、新しいお店や事業に挑戦しやすい環境をつくる。",
-    "benefits": "起業へのハードルを下げられ、空き店舗の活用や商店街の活性化につながる。",
-    "notes": "継続して出店者を集める工夫が必要であり、事業が長続きするとは限らない。",
+    "title": "漁業体験スクール",
+    "content": "子どもや学生、地域外の人が漁業を体験し、地域産業への理解を深める機会をつくります。",
+    "tags": [
+      "漁業",
+      "教育",
+      "体験"
+    ],
     "statusEffects": {
-      "vitality": 10,
-      "livability": 4,
-      "environment": 0,
-      "connection": 5
-        }
-  },
-    {
-    "id": "idea-027",
-    "type": "idea",
-    "title": "公共施設シェア制度",
-    "content": "学校や公民館などの公共施設を、地域活動やイベントに柔軟に活用できるようにする。",
-    "benefits": "既存施設を有効活用でき、地域活動の場を増やすことができる。",
-    "notes": "利用ルールの整備が必要であり、施設管理の負担が増える可能性がある。",
-    "statusEffects": {
-      "vitality": 5,
-      "livability": 6,
-      "environment": 0,
+      "vitality": 9,
+      "livability": 1,
+      "environment": 2,
       "connection": 9
     }
   },
   {
-    "id": "idea-028",
+    "id": "idea-033",
     "type": "idea",
-    "title": "買い物支援サービス",
-    "content": "移動販売車や買い物代行サービスを充実させ、買い物が困難な人を支援する。",
-    "benefits": "日常生活の利便性が向上し、高齢者などの生活を支えることができる。",
-    "notes": "継続的な運営費が必要であり、利用者数を確保する工夫が求められる。",
+    "title": "空き地コミュニティガーデン",
+    "content": "使われていない土地を住民みんなで育てる花壇や菜園として活用します。",
+    "tags": [
+      "空き地",
+      "環境",
+      "交流"
+    ],
     "statusEffects": {
-      "vitality": 2,
-      "livability": 12,
-      "environment": 0,
-      "connection": 5
-        }
+      "vitality": 3,
+      "livability": 7,
+      "environment": 10,
+      "connection": 9
+    }
   },
   {
-    "id": "idea-029",
+    "id": "idea-034",
     "type": "idea",
-    "title": "地域スキルシェア制度",
-    "content": "住民同士で得意なことを教え合う仕組みをつくる。IT、料理、漁業、DIY、防災など、さまざまな知識や技術を地域内で共有する。",
-    "benefits": "地域の知識や技術が受け継がれ、新しい交流や学びが生まれ、世代や職業を超えたつながりができる。",
-    "notes": "講師役となる人材の確保が必要であり、参加者を集める工夫が必要。",
+    "title": "地域おしごと体験週間",
+    "content": "子どもや学生が地域の仕事を体験し、地元で働く魅力を知る機会をつくります。",
+    "tags": [
+      "教育",
+      "仕事",
+      "若者"
+    ],
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 2,
+      "environment": 0,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-035",
+    "type": "idea",
+    "title": "地域カフェ運営プロジェクト",
+    "content": "住民が気軽に集まり、おしゃべりや相談ができるコミュニティカフェを運営します。",
+    "tags": [
+      "交流",
+      "コミュニティ",
+      "居場所"
+    ],
     "statusEffects": {
       "vitality": 5,
-      "livability": 7,
+      "livability": 8,
+      "environment": 0,
+      "connection": 12
+    }
+  },
+  {
+    "id": "idea-036",
+    "type": "idea",
+    "title": "地域文化体験教室",
+    "content": "伝統芸能や郷土料理、昔ながらの暮らしを体験できる教室を定期開催します。",
+    "tags": [
+      "文化",
+      "教育",
+      "伝統"
+    ],
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 3,
       "environment": 0,
       "connection": 10
     }
   },
   {
-    "id": "idea-030",
+    "id": "idea-037",
     "type": "idea",
-    "title": "景観保全ルールづくり",
-    "content": "地域らしい景観を守るため、住民と話し合いながら景観ルールを整備する。",
-    "benefits": "美しい町並みを維持でき、観光資源としての価値向上にもつながる。",
-    "notes": "合意形成に時間がかかり、建築や改修の自由度が下がる場合がある。",
+    "title": "海岸クリーンイベント",
+    "content": "住民や観光客が一緒に海岸清掃を行い、地域の自然を守る活動です。",
+    "tags": [
+      "海",
+      "環境",
+      "地域活動"
+    ],
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 2,
+      "environment": 13,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-038",
+    "type": "idea",
+    "title": "移住サポーター制度",
+    "content": "地域住民が移住者の相談役となり、暮らしや地域とのつながりを支えます。",
+    "tags": [
+      "移住",
+      "交流",
+      "コミュニティ"
+    ],
+    "statusEffects": {
+      "vitality": 6,
+      "livability": 8,
+      "environment": 0,
+      "connection": 11
+    }
+  },
+  {
+    "id": "idea-039",
+    "type": "idea",
+    "title": "地域課題アイデアコンテスト",
+    "content": "住民や学生から地域課題の解決アイデアを募集し、実現を応援します。",
+    "tags": [
+      "アイデア",
+      "住民参加",
+      "挑戦"
+    ],
+    "statusEffects": {
+      "vitality": 9,
+      "livability": 2,
+      "environment": 0,
+      "connection": 9
+    }
+  },
+  {
+    "id": "idea-040",
+    "type": "idea",
+    "title": "防災マップづくり",
+    "content": "住民が一緒に危険箇所や避難場所を確認し、地域独自の防災マップを作成します。",
+    "tags": [
+      "防災",
+      "安全",
+      "地域活動"
+    ],
+    "statusEffects": {
+      "vitality": 1,
+      "livability": 12,
+      "environment": 1,
+      "connection": 9
+    }
+  },
+   {
+    "id": "idea-041",
+    "type": "idea",
+    "title": "空き教室学習ラボ",
+    "content": "使われていない学校の教室を、放課後学習や地域の学びの場として活用します。",
+    "tags": [
+      "教育",
+      "公共施設",
+      "子ども"
+    ],
     "statusEffects": {
       "vitality": 4,
-      "livability": 5,
+      "livability": 9,
+      "environment": 0,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-042",
+    "type": "idea",
+    "title": "地域の昔話語り部プロジェクト",
+    "content": "地域の高齢者が子どもや来訪者へ昔話や地域の歴史を語り継ぐ機会をつくります。",
+    "tags": [
+      "文化継承",
+      "歴史",
+      "交流"
+    ],
+    "statusEffects": {
+      "vitality": 3,
+      "livability": 3,
+      "environment": 0,
+      "connection": 11
+    }
+  },
+  {
+    "id": "idea-043",
+    "type": "idea",
+    "title": "地域シェアサイクル",
+    "content": "住民や観光客が利用できる自転車を設置し、町内を移動しやすくします。",
+    "tags": [
+      "交通",
+      "観光",
+      "環境"
+    ],
+    "statusEffects": {
+      "vitality": 6,
+      "livability": 8,
+      "environment": 7,
+      "connection": 2
+    }
+  },
+  {
+    "id": "idea-044",
+    "type": "idea",
+    "title": "特産品レシピ開発",
+    "content": "地域の農産物や水産物を使った新しい料理を住民や飲食店と一緒に開発します。",
+    "tags": [
+      "特産品",
+      "食",
+      "地域産業"
+    ],
+    "statusEffects": {
+      "vitality": 9,
+      "livability": 2,
+      "environment": 1,
+      "connection": 6
+    }
+  },
+  {
+    "id": "idea-045",
+    "type": "idea",
+    "title": "地域お試し居住制度",
+    "content": "一定期間、地域で暮らしを体験できる住宅やサポートを提供します。",
+    "tags": [
+      "移住",
+      "関係人口",
+      "暮らし"
+    ],
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 8,
+      "environment": 0,
+      "connection": 7
+    }
+  },
+  {
+    "id": "idea-046",
+    "type": "idea",
+    "title": "親子自然体験プログラム",
+    "content": "海や山を活用し、親子で自然を学びながら楽しめる体験イベントを開催します。",
+    "tags": [
+      "自然",
+      "子育て",
+      "体験"
+    ],
+    "statusEffects": {
+      "vitality": 4,
+      "livability": 8,
+      "environment": 8,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-047",
+    "type": "idea",
+    "title": "地域お助けマッチング",
+    "content": "草刈りや荷物運びなど、住民同士で困りごとを助け合える仕組みをつくります。",
+    "tags": [
+      "助け合い",
+      "暮らし",
+      "コミュニティ"
+    ],
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 10,
+      "environment": 0,
+      "connection": 11
+    }
+  },
+  {
+    "id": "idea-048",
+    "type": "idea",
+    "title": "学生地域研究発表会",
+    "content": "地域で活動した学生が成果や提案を住民へ発表し、意見交換を行います。",
+    "tags": [
+      "学生",
+      "教育",
+      "対話"
+    ],
+    "statusEffects": {
+      "vitality": 6,
+      "livability": 2,
+      "environment": 0,
+      "connection": 10
+    }
+  },
+  {
+    "id": "idea-049",
+    "type": "idea",
+    "title": "フードロスシェア拠点",
+    "content": "余った食材や食品を必要な人へ届ける地域の共有拠点を整備します。",
+    "tags": [
+      "食",
+      "環境",
+      "福祉"
+    ],
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 9,
       "environment": 10,
+      "connection": 7
+    }
+  },
+  {
+    "id": "idea-050",
+    "type": "idea",
+    "title": "住民アイデア投票制度",
+    "content": "地域づくりの提案を住民同士で共有し、応援したい取り組みに投票できる仕組みをつくります。",
+    "tags": [
+      "住民参加",
+      "対話",
+      "地域づくり"
+    ],
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 5,
+      "environment": 0,
+      "connection": 12
+    }
+  },
+  {
+    "id": "idea-051",
+    "type": "idea",
+    "title": "地域しごと図鑑づくり",
+    "content": "地域で働く人や仕事を紹介する図鑑を作成し、子どもや若者が地元の仕事を知る機会を増やします。",
+    "tags": [
+      "仕事",
+      "教育",
+      "若者"
+    ],
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 3,
+      "environment": 0,
+      "connection": 7
+    }
+  },
+  {
+    "id": "idea-052",
+    "type": "idea",
+    "title": "遊休農地オーナー制度",
+    "content": "使われていない農地を住民や町外の人が借りて農業体験できる仕組みをつくります。",
+    "tags": [
+      "農業",
+      "関係人口",
+      "体験"
+    ],
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 3,
+      "environment": 9,
+      "connection": 7
+    }
+  },
+  {
+    "id": "idea-053",
+    "type": "idea",
+    "title": "地域スタンプラリー",
+    "content": "商店や観光地、公共施設を巡るスタンプラリーを実施し、町の魅力を再発見します。",
+    "tags": [
+      "観光",
+      "商店街",
+      "交流"
+    ],
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 2,
+      "environment": 0,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-054",
+    "type": "idea",
+    "title": "防災リーダー育成講座",
+    "content": "地域で防災活動を担う人材を育成し、災害時に支え合える体制を整えます。",
+    "tags": [
+      "防災",
+      "教育",
+      "安全"
+    ],
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 13,
+      "environment": 0,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-055",
+    "type": "idea",
+    "title": "地域の小さな市場",
+    "content": "生産者や手づくり作家が気軽に出店できる定期マーケットを開催します。",
+    "tags": [
+      "産業",
+      "交流",
+      "特産品"
+    ],
+    "statusEffects": {
+      "vitality": 10,
+      "livability": 2,
+      "environment": 1,
+      "connection": 9
+    }
+  },
+  {
+    "id": "idea-056",
+    "type": "idea",
+    "title": "地域の困りごと掲示板",
+    "content": "住民が困りごとや手伝ってほしいことを書き込み、地域で解決につなげる仕組みをつくります。",
+    "tags": [
+      "助け合い",
+      "コミュニティ",
+      "暮らし"
+    ],
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 10,
+      "environment": 0,
+      "connection": 12
+    }
+  },
+  {
+    "id": "idea-057",
+    "type": "idea",
+    "title": "地域PR動画コンテスト",
+    "content": "住民や学生が町の魅力を動画で発信し、多様な視点から地域を紹介します。",
+    "tags": [
+      "情報発信",
+      "若者",
+      "地域ブランド"
+    ],
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 1,
+      "environment": 0,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-058",
+    "type": "idea",
+    "title": "親子ものづくり教室",
+    "content": "地域の職人や生産者と一緒に、親子でものづくりを体験できる教室を開催します。",
+    "tags": [
+      "教育",
+      "子育て",
+      "文化"
+    ],
+    "statusEffects": {
+      "vitality": 4,
+      "livability": 8,
+      "environment": 0,
+      "connection": 10
+    }
+  },
+  {
+    "id": "idea-059",
+    "type": "idea",
+    "title": "空き店舗ギャラリー",
+    "content": "空き店舗を地域の作品展示やイベント会場として活用し、新しい交流を生み出します。",
+    "tags": [
+      "空き店舗",
+      "文化",
+      "交流"
+    ],
+    "statusEffects": {
+      "vitality": 7,
+      "livability": 3,
+      "environment": 0,
+      "connection": 10
+    }
+  },
+  {
+    "id": "idea-060",
+    "type": "idea",
+    "title": "地域円卓ミーティング",
+    "content": "住民、事業者、行政、学生が定期的に集まり、地域課題について自由に話し合う場をつくります。",
+    "tags": [
+      "対話",
+      "住民参加",
+      "地域づくり"
+    ],
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 5,
+      "environment": 0,
+      "connection": 13
+    }
+  },
+  {
+    "id": "idea-061",
+    "type": "idea",
+    "title": "地域ウェルカムデー",
+    "content": "移住者や新しく地域に関わる人を歓迎し、住民と交流できるイベントを定期的に開催します。",
+    "tags": [
+      "移住",
+      "交流",
+      "コミュニティ"
+    ],
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 6,
+      "environment": 0,
+      "connection": 13
+    }
+  },
+  {
+    "id": "idea-062",
+    "type": "idea",
+    "title": "地域の未来アイデアラボ",
+    "content": "住民や学生、事業者が集まり、地域課題の解決策を一緒に考え試す場をつくります。",
+    "tags": [
+      "地域づくり",
+      "対話",
+      "挑戦"
+    ],
+    "statusEffects": {
+      "vitality": 8,
+      "livability": 4,
+      "environment": 0,
+      "connection": 12
+    }
+  },
+  {
+    "id": "idea-063",
+    "type": "idea",
+    "title": "放課後みんなの教室",
+    "content": "地域住民が先生となり、子どもたちへ勉強や趣味、生活の知恵を教える放課後教室を開きます。",
+    "tags": [
+      "教育",
+      "子ども",
+      "世代交流"
+    ],
+    "statusEffects": {
+      "vitality": 3,
+      "livability": 10,
+      "environment": 0,
+      "connection": 11
+    }
+  },
+  {
+    "id": "idea-064",
+    "type": "idea",
+    "title": "空き店舗シェアオフィス",
+    "content": "空き店舗を複数の事業者が利用できるシェアオフィスとして整備します。",
+    "tags": [
+      "空き店舗",
+      "起業",
+      "働き方"
+    ],
+    "statusEffects": {
+      "vitality": 11,
+      "livability": 4,
+      "environment": 0,
       "connection": 5
+    }
+  },
+  {
+    "id": "idea-065",
+    "type": "idea",
+    "title": "ゼロウェイストチャレンジ",
+    "content": "ごみの削減や資源の再利用に住民みんなで取り組み、環境負荷の少ない地域を目指します。",
+    "tags": [
+      "環境",
+      "リサイクル",
+      "暮らし"
+    ],
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 5,
+      "environment": 15,
+      "connection": 6
+    }
+  },
+  {
+    "id": "idea-066",
+    "type": "idea",
+    "title": "伝統文化体験パスポート",
+    "content": "祭りや郷土芸能、ものづくりなどを気軽に体験できる共通参加制度をつくります。",
+    "tags": [
+      "文化継承",
+      "体験",
+      "交流"
+    ],
+    "statusEffects": {
+      "vitality": 6,
+      "livability": 3,
+      "environment": 0,
+      "connection": 11
+    }
+  },
+  {
+    "id": "idea-067",
+    "type": "idea",
+    "title": "地域みまもりウォーク",
+    "content": "散歩やジョギングをしながら地域の見守りや危険箇所の確認を行う活動です。",
+    "tags": [
+      "安全",
+      "健康",
+      "地域活動"
+    ],
+    "statusEffects": {
+      "vitality": 2,
+      "livability": 11,
+      "environment": 2,
+      "connection": 8
+    }
+  },
+  {
+    "id": "idea-068",
+    "type": "idea",
+    "title": "地域スポーツ交流会",
+    "content": "世代や地域を越えて気軽に参加できるスポーツイベントを開催します。",
+    "tags": [
+      "スポーツ",
+      "交流",
+      "健康"
+    ],
+    "statusEffects": {
+      "vitality": 5,
+      "livability": 8,
+      "environment": 0,
+      "connection": 10
+    }
+  },
+  {
+    "id": "idea-069",
+    "type": "idea",
+    "title": "地域のお試し起業支援",
+    "content": "短期間・小規模から事業を始められる環境を整え、新しい挑戦を後押しします。",
+    "tags": [
+      "起業",
+      "産業",
+      "挑戦"
+    ],
+    "statusEffects": {
+      "vitality": 12,
+      "livability": 3,
+      "environment": 0,
+      "connection": 5
+    }
+  },
+  {
+    "id": "idea-070",
+    "type": "idea",
+    "title": "町のみらい会議",
+    "content": "住民、学生、行政、事業者など多様な立場の人が、町の未来について継続的に対話する場をつくります。",
+    "tags": [
+      "対話",
+      "住民参加",
+      "未来"
+    ],
+    "statusEffects": {
+      "vitality": 6,
+      "livability": 6,
+      "environment": 0,
+      "connection": 15
     }
   }
 ]

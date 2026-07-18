@@ -22,6 +22,9 @@ export default function GamePage() {
   const {
   turn,
   maxTurns,
+  useEventCard,
+  useChallengeCard,
+  useIdeaCard,
   phase,
   regionStatus,
   currentEventIndex,
@@ -30,6 +33,9 @@ export default function GamePage() {
   eventOrder,
   ideaOrder,
   challengeOrder,
+  usedEventIds,
+  usedChallengeIds,
+  usedIdeaIds,
   nextPhase,
   selectIdea,
   completeTurn,
@@ -79,33 +85,123 @@ console.log("CHALLENGE DEBUG", {
     ]?.title,
 });
 
+const getUnusedCardIndex = (
+  order: number[],
+  usedIds: string[],
+  cardList: {
+    id: string;
+  }[]
+) => {
+  return order.find(
+    (index) =>
+      !usedIds.includes(
+        cardList[index].id
+      )
+  );
+};
+
+const eventIndex =
+  getUnusedCardIndex(
+    eventOrder,
+    usedEventIds,
+    cards.event
+  );
+
+
 const eventCard =
+  eventIndex !== undefined
+    ? cards.event[eventIndex]
+    : cards.event[0];
+    
+    const currentEvent =
   eventOrder.length > 0
     ? cards.event[
         eventOrder[currentEventIndex]
       ]
-    : cards.event[0];
+    : undefined;
 
-const challengeCard =
+
+const currentChallenge =
   challengeOrder.length > 0
     ? cards.challenge[
         challengeOrder[currentChallengeIndex]
       ]
-    : cards.challenge[0];
+    : undefined;
+
+    
+const currentEventTags =
+  currentEvent?.tags ?? [];
+
+
+const challengeCard =
+  cards.challenge
+    .filter(
+      (challenge) =>
+        !usedChallengeIds.includes(
+          challenge.id
+        )
+    )
+    .sort((a, b) => {
+
+      const aMatch =
+        a.tags.filter((tag) =>
+          currentEventTags.includes(tag)
+        ).length;
+
+      const bMatch =
+        b.tags.filter((tag) =>
+          currentEventTags.includes(tag)
+        ).length;
+
+
+      return bMatch - aMatch;
+    })[0];
+    
 
 const currentCard =
   phase === "event"
     ? eventCard
     : challengeCard;
 
-  const ideaCards =
-  ideaOrder
-    .slice(
-      currentIdeaIndex,
-      currentIdeaIndex + 3
+  
+
+
+const eventTags = [
+  ...(currentEvent?.tags ?? []),
+];
+
+const ideaTags = [
+  ...(currentEvent?.tags ?? []),
+  ...(challengeCard?.tags ?? []),
+];
+
+const ideaCards =
+  cards.idea
+    .filter(
+      (idea) =>
+        !usedIdeaIds.includes(
+          idea.id
+        )
     )
+    .map((idea) => {
+      const matchCount =
+  idea.tags.filter((tag) =>
+    ideaTags.includes(tag)
+  ).length;
+
+      return {
+        idea,
+        matchCount,
+      };
+    })
+    .sort(
+      (a, b) =>
+        b.matchCount -
+        a.matchCount
+    )
+    .slice(0, 3)
     .map(
-      (index) => cards.idea[index]
+      ({ idea }) => idea
     );
 
   console.log("PHASE CHECK:", phase);
@@ -158,13 +254,14 @@ const currentCard =
     
       {phase === "idea" ? (
   <IdeaSelector
-    ideas={ideaCards}
-    onSelect={(idea) =>
-      selectIdea(
-        idea.statusEffects
-      )
-    }
-  />
+  ideas={ideaCards}
+  onSelect={(idea) =>
+    selectIdea(
+      idea.id,
+      idea.statusEffects
+    )
+  }
+/>
 ) : phase === "result" ? (
   <section className="rounded-xl border shadow-sm">
     <div className="border-b bg-green-50 px-4 py-3">
